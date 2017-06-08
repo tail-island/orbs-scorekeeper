@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "babel --plugins transform-regenerator src -d target && node app"
+    "start": "babel --plugins transform-regenerator src -d target && node app ./data/question.txt ./data/answer.txt"
   },
   "author": "OJIMA Ryoji",
   "license": "EPL-1.0",

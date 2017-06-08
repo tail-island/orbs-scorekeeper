@@ -1,5 +1,5 @@
 require('babel-polyfill');
-require('./target/score.js');
+require('./target/app.js');
 
 
 
