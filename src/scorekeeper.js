@@ -125,5 +125,6 @@ export default function score(questionString, answerString) {
     // console.log(score);
   }
 
+  // 黒い宝玉が全部外に出ていれば、スコアを返します。
   return R.all(R.complement(R.prop('inCase')), blackOrbs) ? score : null;
 }
