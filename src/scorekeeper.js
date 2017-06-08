@@ -67,6 +67,8 @@ export default function score(questionString, answerString) {
   // スコアを計算します。
   let score = 0;
   for (const command of commands) {
+    // TODO: ここでcommandの値をチェックする。
+
     R.pipe(
       R.always(blackOrbs),
       // ケースの中の黒い宝玉のみにフィルターします。
