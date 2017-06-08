@@ -71,7 +71,7 @@ export default function score(questionString, answerString) {
       R.always(blackOrbs),
       // ケースの中の黒い宝玉のみにフィルターします。
       R.filter(R.prop('inCase')),
-      // 邪魔になる順（たとえば、左に動かすなら左にある方が先）に、ソートします。
+      // 邪魔になる順（たとえば、左に動かすなら左にある方が先になる順）に、ソートします。
       R.sort(R.pipe(R.unapply(R.map(R.prop(command % 2 === 0 ? 'x' : 'y'))), command < 2 ? R.identity : R.reverse, R.apply(R.subtract))),
       // 黒い宝玉を移動させます。
       R.forEach((blackOrb) => {
