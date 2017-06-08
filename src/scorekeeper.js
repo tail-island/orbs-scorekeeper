@@ -122,7 +122,6 @@ export default function score(questionString, answerString) {
     )();
 
     console.log(items);
-    console.log(score);
   }
 
   // 黒い宝玉が全部外に出ていれば、スコアを返します。
