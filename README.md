@@ -23,7 +23,7 @@ $ npm install
 ```shell
 $ npm start
 ```
-ビルド後に、data/question.txtとdata/answer.txtを使用して実行します。最後に`13`と表示されればビルド成功です。
+ビルド後に、data/question.txt（ランダム・シード=0、ゲーム版のサイズ=10、黒い宝玉の数=6、壁の比率=0.1）とdata/answer.txtを使用して実行します。最後に`13`と表示されればビルド成功です。
 
 ### 実行
 
