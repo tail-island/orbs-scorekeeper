@@ -59,6 +59,8 @@ export default function score(questionString, answerString) {
       return [R.append(blackOrbs, acc), R.drop(blackOrbCount, lines)];
     }),
     R.apply((acc, lines) => {
+      // TODO: commandsの値をチェックする。
+
       return [R.append(R.map(R.compose(parseInt, R.trim), lines), acc), []];
     }),
     R.head
@@ -67,8 +69,6 @@ export default function score(questionString, answerString) {
   // スコアを計算します。
   let score = 0;
   for (const command of commands) {
-    // TODO: ここでcommandの値をチェックする。
-
     R.pipe(
       R.always(blackOrbs),
       // ケースの中の黒い宝玉のみにフィルターします。
@@ -123,8 +123,8 @@ export default function score(questionString, answerString) {
       })
     )();
 
-    console.log(items);
-    console.log();
+    // console.log(items);
+    // console.log();
   }
 
   // 黒い宝玉が全部外に出ていれば、スコアを返します。
