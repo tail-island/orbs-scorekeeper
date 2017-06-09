@@ -59,9 +59,15 @@ export default function score(questionString, answerString) {
       return [R.append(blackOrbs, acc), R.drop(blackOrbCount, lines)];
     }),
     R.apply((acc, lines) => {
-      // TODO: commandsの値をチェックする。
+      const commands = R.map(R.compose(parseInt, R.trim), lines);
 
-      return [R.append(R.map(R.compose(parseInt, R.trim), lines), acc), []];
+      for (const command of commands) {
+        if (!Number.isFinite(command) || command < 0 || 3 < command) {
+          throw new Error(`${command}は不正なコマンドです。`);
+        }
+      }
+
+      return [R.append(commands, acc), []];
     }),
     R.head
   )();
@@ -123,8 +129,8 @@ export default function score(questionString, answerString) {
       })
     )();
 
-    // console.log(items);
-    // console.log();
+    console.log(items);
+    console.log();
   }
 
   // 黒い宝玉が全部外に出ていれば、スコアを返します。
