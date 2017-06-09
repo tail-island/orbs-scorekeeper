@@ -1,6 +1,6 @@
 # orbs-scorekeeper
 
-[orbs](https://github.com/tail-island/orbs)の採点用プログラムです。解答のスコアを調べるツールとして、ご使用ください。
+[orbs](https://github.com/tail-island/orbs)の採点用プログラムです。解答のスコアを手軽に調べるツールとして、ご活用ください。
 
 ## ビルド方法
 
